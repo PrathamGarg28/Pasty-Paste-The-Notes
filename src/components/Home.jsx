@@ -2,7 +2,6 @@ import { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
 import { useSearchParams } from 'react-router-dom';
 import { addToPastes, updateToPastes } from '../redux/pasteSlice';
-
 const Home = () => {
   const [title, setTitle] = useState("");
   const [value, setValue] = useState("");
@@ -23,7 +22,6 @@ const Home = () => {
       _id:pasteId || Date.now().toString(36),
       createdAt: new Date().toISOString(),
     }
-    
     if(pasteId){
       //Updation
       dispatch(updateToPastes(paste));
@@ -32,7 +30,6 @@ const Home = () => {
       //Create
       dispatch(addToPastes(paste));
     }
-
     //Cleaning after Creation/Updation
     setTitle('');
     setValue('');
@@ -53,6 +50,7 @@ const Home = () => {
         }
       </button>
       </div>
+      
       <div>
         <textarea 
           className='rounded-2xl mt-4 min-w-[500px] p-4'
@@ -64,5 +62,4 @@ const Home = () => {
     </div>
   )
 }
-
 export default Home
