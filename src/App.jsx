@@ -1,4 +1,3 @@
-import './App.css'
 import {createBrowserRouter, RouterProvider} from 'react-router-dom'
 import Navbar from './components/Navbar';
 import Home from './components/Home'
@@ -9,7 +8,7 @@ const router=createBrowserRouter(
     {
       path:"/",
       element:
-      <div>
+      <div className="w-full h-full flex flex-col">
         <Navbar/>
         <Home/>
       </div>
@@ -17,7 +16,7 @@ const router=createBrowserRouter(
     {
       path:"/pastes",
       element:
-      <div>
+      <div className="w-full h-full flex flex-col">
         <Navbar/>
         <Paste/>
       </div>
@@ -25,7 +24,7 @@ const router=createBrowserRouter(
     {
       path:"/pastes/:id",
       element:
-      <div>
+      <div className="w-full h-full flex flex-col">
         <Navbar/>
         <ViewPaste/>
       </div>
