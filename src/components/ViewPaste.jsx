@@ -31,7 +31,7 @@ const ViewPaste = ({isDisabled}) => {
 
   console.log("Paste->",paste);
   return (
-    <div className="bg-gray-600 h-screen w-screen">
+    <div className="bg-slate-500 min-h-screen w-screen">
       <div className="w-full h-full py-10 max-w-[1200px] mx-auto px-5 lg:px-0">
       <div className="flex flex-col gap-y-5 items-start">
         <input
@@ -62,7 +62,7 @@ const ViewPaste = ({isDisabled}) => {
             >
               {/*Copy  button */}
               <button
-                className={`flex justify-center items-center text-blue-500 transition-all duration-300 ease-in-out group`}
+                className={`flex justify-center items-center text-slate-500 transition-all duration-300 ease-in-out group`}
                 onClick={() => {
                   navigator.clipboard.writeText(paste.content);
                   toast.success("Copied to Clipboard");
